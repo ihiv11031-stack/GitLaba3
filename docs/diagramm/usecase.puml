@@ -1,1 +1,44 @@
+@startuml
+
+left to right direction
+
+actor "Участник клуба (студент)" as Student
+actor "Организатор Клуба" as Organizer
+
+usecase "Редактирование информации о книгах" as UC1
+usecase "Добавление удаление организаторов клуба" as UC2
+usecase "Добавление удаление книг и категорий из системы" as UC3
+
+usecase "ФОТО СТУДЕНТА" as UC4_1
+usecase "ФИО СТУДЕНТА" as UC4_2
+usecase "НОМЕР СТУД БИЛЕТА" as UC4_3
+usecase "ПАСПОРТНЫЕ ДАННЫЕ СТУДЕНТА" as UC4_4
+usecase "НОМЕР ЧИТАТЕЛЬСКОГО БИЛЕТА" as UC4_5
+usecase "КОНТАКТНЫЕ ДАННЫЕ СТУДЕНТА" as UC4_6
+
+usecase "КНИГА КОТОРУЮ ВЗЯЛ СТУДЕНТ" as UC5_1
+usecase "АВТОР КНИГИ КОТОРУЮ ВЗЯЛ СТУДЕНТ" as UC5_2
+
+Student --> UC4_1
+Student --> UC4_2
+Student --> UC4_3
+Student --> UC4_4
+Student --> UC4_5
+Student --> UC4_6
+Student --> UC5_1
+Student --> UC5_2
+
+Organizer --> UC1
+Organizer --> UC2
+Organizer --> UC3
+Organizer --> UC4_1
+Organizer --> UC4_2
+Organizer --> UC4_3
+Organizer --> UC4_4
+Organizer --> UC4_5
+Organizer --> UC4_6
+Organizer --> UC5_1
+Organizer --> UC5_2
+
+@enduml
 
